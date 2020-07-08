@@ -1,0 +1,214 @@
+/* --- NAVIGATOR BAR --- */
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 150%;
+    background: #42455a;
+}
+body{
+    font-family: monterrat;
+    background: #42455a;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    
+}
+nav{
+    background: #2ed573;
+    height: 80px;
+    width: 100%;
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px; 
+    padding: 0 100px;
+    font-weight: bold;
+}
+.logo img{
+    width: 50px;
+    margin-top: 12px;
+    margin-right: 48px;
+}
+nav ul{
+    float: right;
+    margin-right: 150px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 4px;
+}
+nav ul li a{
+    color: #222f3e;
+    font-size: 17px;
+    padding: 7px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a.active, a:hover{
+    background: #7bed9f;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    margin-top: 20px;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+/* --- ART DISPLAY --- */
+/*
+.galler-section{
+    width: 80%;
+    padding: 60px 0;
+    background: #f1f1f1;
+}
+.galler-section .gallery-vertical{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+   
+} */
+.inner-width{
+    width: 100%;
+    max-width: 842px;
+    max-height: 559px;
+    margin: auto;
+    padding: 0 20px;
+    text-align: center;
+}
+.gallery-section-vertical h1{
+    margin-top: 25;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+}
+.border{
+    width: 180px;
+    height: 4px;
+    background: white;
+    margin: 60px auto;
+    
+}
+.gallery-section-vertical .image{
+    flex: 25%;
+    overflow: hidden;
+    cursor: pointer;
+      
+}
+.gallery-section-vertical .image img{
+    width: 65%;
+    height: 65%;
+    transition: 0.4s;
+    
+}
+.gallery-section-vertical .image:hover img{
+    transform: scale(1.4) rotate(15deg);
+}
+.source{
+    color: #1dd1a1;
+    font-size: 25px;
+}
+
+
+/* --- RESPONSIVE VIEW --- */
+#check{
+    display: none;
+}
+@media (max-width: 925px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+/*Iphone*/
+@media (max-width: 812px){
+     .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+        color: #2bcbba;
+    }
+    a:hover, a.active{
+        background: none;
+        color: #fed330;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    /* --- NEW --- */
+    .gallery-section-vertical .image{
+        flex: 50%;
+    }
+    .inner-width{
+        height: 100%;
+    }
+    .gallery-section-vertical .image img{
+    width: 100%;
+    height: 90%;
+    transition: 0.4s;
+    
+    }
+}
+/*Iphone Plus*/ 
+@media only screen and (min-device-width : 768px) 
+    and (max-device-width : 1024px)  { 
+    .gallery-section-vertical .image img{
+        width: 75%;
+        height: 125%;
+        transition: 0.4s;
+    }
+}
+/*Ipad*/
+@media only screen and (min-device-width: 413px) and (max-device-width: 415px) { 
+    .gallery-section-vertical .image img{
+        width: 80%;
+        height: 80%;
+        transition: 0.4s;
+    }
+}
+/*Ipad Pro*/
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+    and (-webkit-min-device-pixel-ratio: 2){
+    .gallery-section-vertical .image img{
+        width: 100%;
+        height: 60%;
+        transition: 0.4s;
+    }
+}
+
+
