@@ -2,6 +2,7 @@
 <html lang:vi>
 <head>
 	<title> Assignment 1 </title>
+</head>
 <body>
 <p><a href="#">CREVEA Inc</a></p>
 <ul>
@@ -49,7 +50,13 @@
 <form>
     <input type="text" name="fullname" placeholder="Your name"><br>
     <input type="email" name="email" placeholder="Email address"><br>
-    <input type="number" name="usertel" placeholder="Phone number"><br>
+    <input type="tel" name="usertel" placeholder="Phone number" onkeydown="javascript: return event.keyCode === 8 ||
+event.keyCode === 46 ? true : !isNaN(Number(event.key))"><style>input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}</style>
+    <br>
     <textarea rows="10" cols="200">Your message</textarea><br>
     <input type="submit" value="Send message"><br>
 <img src="https://i.imgur.com/o9NCdFV.png" width="1150" height="480"><br>
@@ -87,5 +94,4 @@
         <li><a href="#">CONTACT</a></li>
     </ul>
 </body>
-</head>
 </html>
